@@ -1,21 +1,3 @@
-# vue-component-communication
-
-> 一个一个vue组件传值的测试demo
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+#一些奇怪的地方
+vue每次加载路由进入一个组件都会 新建一个vue实例。每次新建的时候之前的实例一直会保存，不会消失。eg：一个组件B，每次通过路由进入，这个组件打印出来的this(vue实例)都不同，而且都不会消失。
+如果从另一个组件A中emit一个时间，多次加载的组件B(通过vueBus传值)新建的vue实例，每一个实例都会收到值。
