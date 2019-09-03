@@ -10,6 +10,16 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/A',
+      name: 'A',
+      component: () => import  ('../components/Achild')
+    },
+    {
+      path: '/B',
+      name: 'B',
+      component: () => import('../components/Bchild')
     }
   ]
 })
