@@ -14,12 +14,18 @@ export default new Router({
     {
       path: '/A',
       name: 'A',
-      component: () => import  ('../components/Achild')
+      component: () => import  ('../components/Achild'),
+      meta: {
+        keepAlive: true  // 需要缓存 通过keep-alive 保存该组件的状态
+      }
     },
     {
       path: '/B',
       name: 'B',
-      component: () => import('../components/Bchild')
+      component: () => import('../components/Bchild'),
+      meta: {
+        keepAlive: true  // 需要缓存 通过keep-alive 保存该组件的状态
+      }
     }
   ]
 })
